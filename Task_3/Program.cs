@@ -2,23 +2,17 @@
 
 var queue = new BiDirectionalPriorityQueue<string>();
 
-
-queue.Enqueue("apple", 2);
-queue.Enqueue("banana", 3);
-queue.Enqueue("cherry", 1);
-
-
-Console.WriteLine($"Highest priority item: {queue.Peek(Mode.Highest)}"); 
-
-var dequeuedItem = queue.Dequeue(Mode.Highest);
-Console.WriteLine($"Dequeued item: {dequeuedItem}"); 
+queue.Enqueue("cat", 10);
+queue.Enqueue("dog", 15);
+queue.Enqueue("hamster", 20);
 
 Console.WriteLine($"Newest item: {queue.Peek(Mode.Newest)}"); 
+Console.WriteLine($"Oldest item: {queue.Peek(Mode.Oldest)}");
+Console.WriteLine($"Highest priority item: {queue.Peek(Mode.Highest)}");
+Console.WriteLine($"Lowest priority item: {queue.Peek(Mode.Lowest)}");
 
-dequeuedItem = queue.Dequeue(Mode.Newest);
-Console.WriteLine($"Dequeued newest item: {dequeuedItem}"); 
+var dequeuedItem = queue.Dequeue(Mode.Highest);
+Console.WriteLine($"Dequeued item: {dequeuedItem}");
 
-Console.WriteLine($"Oldest item: {queue.Peek(Mode.Oldest)}"); 
-
-dequeuedItem = queue.Dequeue(Mode.Oldest);
-Console.WriteLine($"Dequeued oldest item: {dequeuedItem}"); 
+Console.WriteLine($"Highest priority item: {queue.Peek(Mode.Highest)}");
+Console.ReadLine();
