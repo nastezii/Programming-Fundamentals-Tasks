@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Task_2;
+
+Func<int, int> CalculateSquare = x =>
+{
+    Console.WriteLine($"calculating the square of {x}");
+    return x * x;
+};
